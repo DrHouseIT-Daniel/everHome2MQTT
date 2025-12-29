@@ -875,12 +875,14 @@
             "11868f5defbb3ea5",
             "8d21578953d34c91",
             "eae3d70df44ab014",
-            "f9bc7cbca77a0e7c"
+            "f9bc7cbca77a0e7c",
+            "2a19c42f3532d253",
+            "323478b32f7b44bd"
         ],
         "x": 54,
         "y": 659,
         "w": 2292,
-        "h": 2142
+        "h": 2182
     },
     {
         "id": "3e61b13e9b5416f9",
@@ -2170,7 +2172,7 @@
         "z": "cf02ad9c7e091fb3",
         "g": "efea786323ebcbac",
         "name": "Settings",
-        "func": "const language = 'de';// de,en,fr,it\nglobal.set('test',false);\nglobal.set(\"add_simu_devices\", false);\nreturn msg;\n\n",
+        "func": "const language = 'de';// de,en,fr,it\nglobal.set('test',false);\nglobal.set(\"add_simu_devices\", true);\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2950,7 +2952,7 @@
         "z": "cf02ad9c7e091fb3",
         "g": "efea786323ebcbac",
         "name": "translations",
-        "func": "const translations = {\n    \"lastexecute\": {\n        \"en\": \"Last execute\",\n        \"fr\": \"Dernière exécution\",\n        \"de\": \"Letzte Ausführung\"\n    },\n    \"lastreceive\": {\n        \"en\": \"Last transmission\",\n        \"fr\": \"Dernière diffusion\",\n        \"de\": \"Letzte Übertragung\"\n    },    \n    \"subtype\": {\n    \"en\": \"Device type\",\n    \"fr\": \"Type d'appareil\",\n    \"de\": \"Gerätetyp\"\n    },\n    \"shutter\": {\n        \"en\": \"Roller shutter\",\n        \"fr\": \"Volet roulant\",\n        \"de\": \"Rollladen\"\n    },   \n    \"window\": {\n        \"en\": \"Window\",\n        \"fr\": \"Fenêtre\",\n        \"de\": \"Fenster\"\n    },       \n    \"door\": {\n        \"en\": \"Door\",\n        \"fr\": \"Porte\",\n        \"de\": \"Tür\"\n    },\n    \"light\": {\n        \"en\": \"Light\",\n        \"fr\": \"Lumière\",\n        \"de\": \"Licht\"\n    },  \n    \"socket\": {\n        \"en\": \"Power outlet\",\n        \"fr\": \"Prise de courant\",\n        \"de\": \"Steckdose\"\n    },   \n    \"brightness\": {\n        \"en\": \"Brightness\",\n        \"fr\": \"Luminosité\",\n        \"de\": \"Helligkeit\"\n    }, \n    \"heating\": {\n        \"en\": \"Heating\",\n        \"fr\": \"Chauffe-eau\",\n        \"de\": \"Heizung\"\n    },\n    \"impulse\": {\n        \"en\": \"Impulse\",\n        \"fr\": \"Impulsion\",\n        \"de\": \"Impuls\"\n    },\n    \"sender\": {\n        \"en\": \"Transmitter\",\n        \"fr\": \"Canaliser\",\n        \"de\": \"Sender\"\n    },\n    \"gateway\": {\n        \"en\": \"Gateway\",\n        \"fr\": \"Gateway\",\n        \"de\": \"Gateway\"\n    },\n    \"batteryboolean\": {\n        \"en\": \"Battery status\",\n        \"fr\": \"État de la batterie\",\n        \"de\": \"Batteriestatus\"\n    },\n    \"serial\": {\n        \"en\": \"Serial number\",\n        \"fr\": \"Numéro de série\",\n        \"de\": \"Seriennummer\"\n    },    \n    \"batterypercentage\": {\n        \"en\": \"Battery\",\n        \"fr\": \"Batterie\",\n        \"de\": \"Batterie\"\n    },\n    \"batteryvoltage\": {\n        \"en\": \"Battery voltage\",\n        \"fr\": \"Tension de la batterie\",\n        \"de\": \"Batteriespannung\"\n    }, \n    \"valve\": {\n        \"en\": \"Valve position\",\n        \"fr\": \"Position de la vanne\",\n        \"de\": \"Ventilstellung\"\n    },\n    \"temperature\": {\n        \"en\": \"Temperature\",\n        \"fr\": \"Température\",\n        \"de\": \"Temperatur\"\n    },\n    \"temperaturetarget\": {\n        \"en\": \"Target temperature\",\n        \"fr\": \"Température cible\",\n        \"de\": \"Soll Temperatur\"\n    },\n    \"mobile\": {\n        \"en\": \"Mobile devices\",\n        \"fr\": \"Appareils mobiles\",\n        \"de\": \"Mobilgeräte\"\n    }, \n    \"electricitymeter\": {\n        \"en\": \"Electricity meter\",\n        \"fr\": \"Compteur d'électricité\",\n        \"de\": \"Stromzähler\" \n    },\n    \"connected\": {\n        \"en\": \"Connection state\",\n        \"fr\": \"État de la connexion\",\n        \"de\": \"Verbindungsstatus\"\n    },\n    \"ip-wifi\": {\n        \"en\": \"Wifi IP address\",\n        \"fr\": \"Adresse IP Wifi\",\n        \"de\": \"WLAN IP-Adresse\"\n    },   \n    \"localip\": {\n        \"en\": \"IP address in the home network\",\n        \"fr\": \"Adresse IP dans le réseau domestique\",\n        \"de\": \"IP Adresse im Heimnetzwerk\"\n    },   \n    \"wanip\": {\n        \"en\": \"Public IP address\",\n        \"fr\": \"Adresse IP publique\",\n        \"de\": \"Öffentliche IP-Adresse\"\n    },\n    \"humidity\": {\n        \"en\": \"Humidity\",\n        \"fr\": \"Humidité de l'air\",\n        \"de\": \"Luftfeuchtigkeit\"\n    },\n    \"local_api_connected\": {\n        \"en\": \"Local interface\",\n        \"fr\": \"Interface locale\",\n        \"de\": \"Lokale Schnittstelle\"        \n    },   \n    \"motion\": {\n        \"en\": \"Motion\",\n        \"fr\": \"Mouvement\",\n        \"de\": \"Bewegung\"        \n    }, \n    \"motiondetector\": {\n        \"en\": \"Motion detectorn\",\n        \"fr\": \"Détecteur de mouvement\",\n        \"de\": \"Bewegungsmelder\"\n    },                                                                                                               \n    \"action\": {\n        \"en\": \"Action\",\n        \"fr\": \"Action\",\n        \"de\": \"Aktion\"\n    }, \n    \"blind\": {\n        \"en\": \"Blind\",\n        \"fr\": \"Stores vénitiens\",\n        \"de\": \"Raffstore\"\n    },\n    \"group\": {\n        \"en\": \"Group\",\n        \"fr\": \"Groupe\",\n        \"de\": \"Gruppe\"\n    },  \n    \"groups\": {\n        \"en\": \"Groups\",\n        \"fr\": \"Groupes\",\n        \"de\": \"Gruppen\"\n    }, \n    \"home\": {\n        \"en\": \"Home\",\n        \"fr\": \"Maison\",\n        \"de\": \"Heim\"\n    }, \n    \"present\": {\n        \"en\": \"Present\",\n        \"fr\": \"Présent\",\n        \"de\": \"Anwesend\"\n    },\n    \"away\": {\n        \"en\": \"Away\",\n        \"fr\": \"Absent\",\n        \"de\": \"Abwesend\"\n    },\n    \"holiday\": {\n        \"en\": \"Holiday\",\n        \"fr\": \"Vacances\",\n        \"de\": \"Urlaub\"\n    },    \n    \"presence\": {\n        \"en\": \"Presence\",\n        \"fr\": \"Présence\",\n        \"de\": \"Anwesenheit\"\n    },\n    \"luminance\": {\n        \"en\": \"Luminance\",\n        \"fr\": \"Luminance\",\n        \"de\": \"Lichtstärke\"\n    },   \n    \"lightsensor\": {\n        \"en\": \"Lightsensor\",\n        \"fr\": \"Capteur de lumière\",\n        \"de\": \"Lichtsensor\"\n    },   \n    \"awning\": {\n        \"en\": \"Awning\",\n        \"fr\": \"auvent\",\n        \"de\": \"Markise\"\n    }, \n    \"latest_version\": {\n        \"en\": \"Latest Version\",\n        \"fr\": \"Dernière version\",\n        \"de\": \"Neueste Version\"\n    },\n    \"installed_version\": {\n        \"en\": \"Installed Version\",\n        \"fr\": \"Version installée\",\n        \"de\": \"Installierte Version\"\n    },\n    \"synchronize\": {\n        \"en\": \"Synchronize\",\n        \"fr\": \"Synchroniser\",\n        \"de\": \"Synchronisieren\"\n    }    \n};\nglobal.set(\"translations\", translations);\nreturn msg;\n\n",
+        "func": "const translations = {\n    \"lastexecute\": {\n        \"en\": \"Last execute\",\n        \"fr\": \"Dernière exécution\",\n        \"de\": \"Letzte Ausführung\"\n    },\n    \"lastreceive\": {\n        \"en\": \"Last transmission\",\n        \"fr\": \"Dernière diffusion\",\n        \"de\": \"Letzte Übertragung\"\n    },    \n    \"subtype\": {\n    \"en\": \"Device type\",\n    \"fr\": \"Type d'appareil\",\n    \"de\": \"Gerätetyp\"\n    },\n    \"shutter\": {\n        \"en\": \"Roller shutter\",\n        \"fr\": \"Volet roulant\",\n        \"de\": \"Rollladen\"\n    },   \n    \"window\": {\n        \"en\": \"Window\",\n        \"fr\": \"Fenêtre\",\n        \"de\": \"Fenster\"\n    },       \n    \"door\": {\n        \"en\": \"Door\",\n        \"fr\": \"Porte\",\n        \"de\": \"Tür\"\n    },\n    \"light\": {\n        \"en\": \"Light\",\n        \"fr\": \"Lumière\",\n        \"de\": \"Licht\"\n    },  \n    \"socket\": {\n        \"en\": \"Power outlet\",\n        \"fr\": \"Prise de courant\",\n        \"de\": \"Steckdose\"\n    },   \n    \"brightness\": {\n        \"en\": \"Brightness\",\n        \"fr\": \"Luminosité\",\n        \"de\": \"Helligkeit\"\n    }, \n    \"heating\": {\n        \"en\": \"Heating\",\n        \"fr\": \"Chauffe-eau\",\n        \"de\": \"Heizung\"\n    },\n    \"impulse\": {\n        \"en\": \"Impulse\",\n        \"fr\": \"Impulsion\",\n        \"de\": \"Impuls\"\n    },\n    \"sender\": {\n        \"en\": \"Transmitter\",\n        \"fr\": \"Canaliser\",\n        \"de\": \"Sender\"\n    },\n    \"gateway\": {\n        \"en\": \"Gateway\",\n        \"fr\": \"Gateway\",\n        \"de\": \"Gateway\"\n    },\n    \"batteryboolean\": {\n        \"en\": \"Battery status\",\n        \"fr\": \"État de la batterie\",\n        \"de\": \"Batteriestatus\"\n    },\n    \"serial\": {\n        \"en\": \"Serial number\",\n        \"fr\": \"Numéro de série\",\n        \"de\": \"Seriennummer\"\n    },    \n    \"batterypercentage\": {\n        \"en\": \"Battery\",\n        \"fr\": \"Batterie\",\n        \"de\": \"Batterie\"\n    },\n    \"batteryvoltage\": {\n        \"en\": \"Battery voltage\",\n        \"fr\": \"Tension de la batterie\",\n        \"de\": \"Batteriespannung\"\n    }, \n    \"valve\": {\n        \"en\": \"Valve position\",\n        \"fr\": \"Position de la vanne\",\n        \"de\": \"Ventilstellung\"\n    },\n    \"temperature\": {\n        \"en\": \"Temperature\",\n        \"fr\": \"Température\",\n        \"de\": \"Temperatur\"\n    },\n    \"temperaturetarget\": {\n        \"en\": \"Target temperature\",\n        \"fr\": \"Température cible\",\n        \"de\": \"Soll Temperatur\"\n    },\n    \"mobile\": {\n        \"en\": \"Mobile devices\",\n        \"fr\": \"Appareils mobiles\",\n        \"de\": \"Mobilgeräte\"\n    }, \n    \"electricitymeter\": {\n        \"en\": \"Electricity meter\",\n        \"fr\": \"Compteur d'électricité\",\n        \"de\": \"Stromzähler\" \n    },\n    \"connected\": {\n        \"en\": \"Connection state\",\n        \"fr\": \"État de la connexion\",\n        \"de\": \"Verbindungsstatus\"\n    },\n    \"ip-wifi\": {\n        \"en\": \"Wifi IP address\",\n        \"fr\": \"Adresse IP Wifi\",\n        \"de\": \"WLAN IP-Adresse\"\n    },   \n    \"localip\": {\n        \"en\": \"IP address in the home network\",\n        \"fr\": \"Adresse IP dans le réseau domestique\",\n        \"de\": \"IP Adresse im Heimnetzwerk\"\n    },   \n    \"wanip\": {\n        \"en\": \"Public IP address\",\n        \"fr\": \"Adresse IP publique\",\n        \"de\": \"Öffentliche IP-Adresse\"\n    },\n    \"humidity\": {\n        \"en\": \"Humidity\",\n        \"fr\": \"Humidité de l'air\",\n        \"de\": \"Luftfeuchtigkeit\"\n    },\n    \"local_api_connected\": {\n        \"en\": \"Local interface\",\n        \"fr\": \"Interface locale\",\n        \"de\": \"Lokale Schnittstelle\"        \n    },   \n    \"motion\": {\n        \"en\": \"Motion\",\n        \"fr\": \"Mouvement\",\n        \"de\": \"Bewegung\"        \n    }, \n    \"motiondetector\": {\n        \"en\": \"Motion detectorn\",\n        \"fr\": \"Détecteur de mouvement\",\n        \"de\": \"Bewegungsmelder\"\n    },                                                                                                               \n    \"action\": {\n        \"en\": \"Action\",\n        \"fr\": \"Action\",\n        \"de\": \"Aktion\"\n    }, \n    \"blind\": {\n        \"en\": \"Blind\",\n        \"fr\": \"Stores vénitiens\",\n        \"de\": \"Raffstore\"\n    },\n    \"group\": {\n        \"en\": \"Group\",\n        \"fr\": \"Groupe\",\n        \"de\": \"Gruppe\"\n    },  \n    \"groups\": {\n        \"en\": \"Groups\",\n        \"fr\": \"Groupes\",\n        \"de\": \"Gruppen\"\n    }, \n    \"home\": {\n        \"en\": \"Home\",\n        \"fr\": \"Maison\",\n        \"de\": \"Heim\"\n    }, \n    \"present\": {\n        \"en\": \"Present\",\n        \"fr\": \"Présent\",\n        \"de\": \"Anwesend\"\n    },\n    \"away\": {\n        \"en\": \"Away\",\n        \"fr\": \"Absent\",\n        \"de\": \"Abwesend\"\n    },\n    \"holiday\": {\n        \"en\": \"Holiday\",\n        \"fr\": \"Vacances\",\n        \"de\": \"Urlaub\"\n    },    \n    \"presence\": {\n        \"en\": \"Presence\",\n        \"fr\": \"Présence\",\n        \"de\": \"Anwesenheit\"\n    },\n    \"luminance\": {\n        \"en\": \"Luminance\",\n        \"fr\": \"Luminance\",\n        \"de\": \"Lichtstärke\"\n    },   \n    \"lightsensor\": {\n        \"en\": \"Lightsensor\",\n        \"fr\": \"Capteur de lumière\",\n        \"de\": \"Lichtsensor\"\n    },   \n    \"awning\": {\n        \"en\": \"Awning\",\n        \"fr\": \"auvent\",\n        \"de\": \"Markise\"\n    }, \n    \"latest_version\": {\n        \"en\": \"Latest Version\",\n        \"fr\": \"Dernière version\",\n        \"de\": \"Neueste Version\"\n    },\n    \"installed_version\": {\n        \"en\": \"Installed Version\",\n        \"fr\": \"Version installée\",\n        \"de\": \"Installierte Version\"\n    },\n    \"synchronize\": {\n        \"en\": \"Synchronize\",\n        \"fr\": \"Synchroniser\",\n        \"de\": \"Synchronisieren\"\n    },\n    \"devicetemperature\": {\n        \"en\": \"device temperature\",\n        \"fr\": \"température de l'appareil\",\n        \"de\": \"Gerätetemperatur\"\n    }, \n    \"soc\": {\n        \"en\": \"state of charge\",\n        \"fr\": \"état de charge\",\n        \"de\": \"Ladezustand\"\n    }            \n};\nglobal.set(\"translations\", translations);\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -5926,7 +5928,9 @@
                 "11868f5defbb3ea5",
                 "8d21578953d34c91",
                 "eae3d70df44ab014",
-                "f9bc7cbca77a0e7c"
+                "f9bc7cbca77a0e7c",
+                "2a19c42f3532d253",
+                "323478b32f7b44bd"
             ]
         ]
     },
@@ -6160,7 +6164,7 @@
         "finalize": "",
         "libs": [],
         "x": 1640,
-        "y": 2760,
+        "y": 2800,
         "wires": [
             [
                 "4a300ee35db77eae",
@@ -6182,7 +6186,7 @@
         "finalize": "",
         "libs": [],
         "x": 1480,
-        "y": 2760,
+        "y": 2800,
         "wires": [
             [
                 "13294fbd1cf1d90c"
@@ -6208,7 +6212,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1150,
-        "y": 2680,
+        "y": 2720,
         "wires": [
             [
                 "9680249a2bb20205"
@@ -6235,7 +6239,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1160,
-        "y": 2760,
+        "y": 2800,
         "wires": [
             [
                 "e846570c36ad4d23"
@@ -6255,7 +6259,7 @@
             "951449e6169ec919"
         ],
         "x": 915,
-        "y": 2740,
+        "y": 2780,
         "wires": [
             [
                 "9680249a2bb20205"
@@ -6273,7 +6277,7 @@
             "9b27b02732ad3f57"
         ],
         "x": 2105,
-        "y": 2680,
+        "y": 2720,
         "wires": []
     },
     {
@@ -6661,7 +6665,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1930,
-        "y": 2680,
+        "y": 2720,
         "wires": [
             [
                 "aeb87f3ae70b534d"
@@ -6690,7 +6694,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1940,
-        "y": 2760,
+        "y": 2800,
         "wires": [
             [
                 "3cfb5b52c12a7162"
@@ -7119,6 +7123,48 @@
             [
                 "098dd18a510b4a34",
                 "07ccf8bc620e2eb5"
+            ]
+        ]
+    },
+    {
+        "id": "2a19c42f3532d253",
+        "type": "function",
+        "z": "95278f532bb93da2",
+        "g": "b2f04ce1015743c7",
+        "name": "sensor - soc",
+        "func": "const uniq_id_sub = \"soc\";\n\nlet unitofmeasurement = '%';\nlet icon = \"mdi:percent-outline\";\n\nconst element = msg.payload;\n\nif (element.states[uniq_id_sub] !== undefined) { \n    const stat_t = `${element.main_topic}/${element.id}/states/${uniq_id_sub}`;\n    const avty = [...element.config.avty];\n    avty.push(\n        {\n            \"t\": stat_t,\n            \"val_tpl\": `{{'online' if value_json.value is defined else 'offline'}}`\n        }\n    )\n\n    let payload = {\n        \"uniq_id\": `${element.uniq_id_main}_${uniq_id_sub}`,\n        \"stat_t\": stat_t,\n        \"name\": ((text, targetLanguage) => global.get(\"translations\")[text]?.[targetLanguage] || global.get(\"translations\")[text]?.en || text)(uniq_id_sub, global.get(\"language\")),\n        \"unit_of_measurement\": unitofmeasurement,\n        \"icon\": icon,\n        \"val_tpl\": `{{ value_json.value if value_json.value is defined else 'false'}}`,\n        \"device\": {\n            //\"name\": element.device_name,\n            \"ids\": [\n                element.device_id\n            ]\n        },\n        \"avty\": avty,\n        \"avty_mode\": \"all\"\n    };\n\n    if (element.set_object_id) {\n        payload[\"obj_id\"] = payload.uniq_id;\n    }\n    let discovery_prefix = 'homeassistant';\n    let component = 'sensor';\n    let node_id = 'everhome';\n\n    let prefix = 'config';\n    let topic = `${discovery_prefix}/${component}/${node_id}/${element.uniq_id_main}_${uniq_id_sub}/${prefix}`;\n    msg.topic = topic;\n\n    msg.payload = payload;\n    node.send(msg);\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 2680,
+        "wires": [
+            [
+                "4a300ee35db77eae"
+            ]
+        ]
+    },
+    {
+        "id": "323478b32f7b44bd",
+        "type": "function",
+        "z": "95278f532bb93da2",
+        "g": "b2f04ce1015743c7",
+        "name": "sensor - devicetemperature",
+        "func": "const uniq_id_sub = \"devicetemperature\";\n\nlet deviceclass = 'temperature';\nlet stateclass = 'measurement';\n\nconst element = msg.payload;\n\nif (element.states[uniq_id_sub] !== undefined) {\n\n    let unitofmeasurement = null;\n\n    if (element.statedefinitions[uniq_id_sub] !== undefined && element.statedefinitions[uniq_id_sub].unitkey !== undefined) {\n        if (element.statedefinitions[uniq_id_sub].unitkey === 'celsius') {\n            unitofmeasurement = '°C';\n        }\n    }\n\n    const stat_t = `${element.main_topic}/${element.id}/states/${uniq_id_sub}`;\n    const avty = [...element.config.avty];\n    avty.push(\n        {\n            \"t\": stat_t,\n            \"val_tpl\": `{{'online' if value_json.value is defined else 'offline'}}`\n        }\n    )\n\n    let payload = {\n        \"uniq_id\": `${element.uniq_id_main}_${uniq_id_sub}`,\n        \"stat_t\": stat_t,\n        \"name\": ((text, targetLanguage) => global.get(\"translations\")[text]?.[targetLanguage] || global.get(\"translations\")[text]?.en || text)(uniq_id_sub, global.get(\"language\")),\n        \"state_class\": stateclass,\n        \"device_class\": deviceclass,\n        \"val_tpl\": `{{ value_json.value if value_json.value is defined else 'false'}}`,\n        \"device\": {\n            //\"name\": element.device_name,\n            \"ids\": [\n                element.device_id\n            ]\n        },\n        \"avty\": avty,\n        \"avty_mode\": \"all\"\n    };\n\n    if (unitofmeasurement !== null) {\n        payload[\"unit_of_measurement\"] = unitofmeasurement;\n    }\n\n    if (element.set_object_id) {\n        payload[\"obj_id\"] = payload.uniq_id;\n    }\n    let discovery_prefix = 'homeassistant';\n    let component = 'sensor';\n    let node_id = 'everhome';\n\n    let prefix = 'config';\n    let topic = `${discovery_prefix}/${component}/${node_id}/${element.uniq_id_main}_${uniq_id_sub}/${prefix}`;\n    msg.topic = topic;\n\n    msg.payload = payload;\n    node.send(msg);\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1540,
+        "y": 2740,
+        "wires": [
+            [
+                "4a300ee35db77eae"
             ]
         ]
     },
