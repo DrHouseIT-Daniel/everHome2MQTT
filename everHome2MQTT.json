@@ -6342,7 +6342,7 @@
         "z": "95278f532bb93da2",
         "g": "b2f04ce1015743c7",
         "name": "Filter Electricitymeters",
-        "func": "const devices = global.get(\"devices\");\n\ndevices.forEach(function (element) {\n    if (\n        typeof element !== 'undefined' &&\n        typeof element.states !== 'undefined' &&\n        element.states.energyCounterIn !== undefined &&\n        element.states.energyCounterOut !== undefined &&\n        element.states.power !== undefined &&\n        element.states.connected !== undefined\n    ) {\n        element.states.local_api_connected = false;\n        node.send({ payload: element });\n    }\n});\n\nnode.send([null, msg]);\n",
+        "func": "const devices = global.get(\"devices\");\n\ndevices.forEach(function (element) {\n    if (\n        typeof element !== 'undefined' &&\n        typeof element.states !== 'undefined' &&\n        element.states.energyCounterIn !== undefined &&\n        element.states.energyCounterOut !== undefined &&\n        element.states.power !== undefined &&\n        element.states.connected !== undefined &&\n        element.subtype === 'electricitymeter'\n    ) {\n        element.states.local_api_connected = false;\n        node.send({ payload: element });\n    }\n});\n\nnode.send([null, msg]);\n",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
