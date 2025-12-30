@@ -2172,7 +2172,7 @@
         "z": "cf02ad9c7e091fb3",
         "g": "efea786323ebcbac",
         "name": "Settings",
-        "func": "const language = 'de';// de,en,fr,it\nglobal.set('test',false);\nglobal.set(\"add_simu_devices\", true);\nreturn msg;\n\n",
+        "func": "const language = 'de';// de,en,fr,it\nglobal.set('test',false);\nglobal.set(\"add_simu_devices\", false);\nreturn msg;\n\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
