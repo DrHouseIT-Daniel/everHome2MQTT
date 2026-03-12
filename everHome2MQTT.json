@@ -877,8 +877,7 @@
             "eae3d70df44ab014",
             "f9bc7cbca77a0e7c",
             "2a19c42f3532d253",
-            "323478b32f7b44bd",
-            "68fbf80e5284f0a6"
+            "323478b32f7b44bd"
         ],
         "x": 54,
         "y": 659,
@@ -1682,7 +1681,7 @@
         "type": "comment",
         "z": "cf02ad9c7e091fb3",
         "g": "efea786323ebcbac",
-        "name": "V2.0.11",
+        "name": "V2.0.12",
         "info": "",
         "x": 130,
         "y": 100,
@@ -1941,7 +1940,7 @@
         "z": "cf02ad9c7e091fb3",
         "g": "efea786323ebcbac",
         "name": "Init",
-        "func": "global.set(\"config\", {\n    central_done: false,\n    gateways_done: false,\n    all_other_devices_done: false,\n});\n\nglobal.set(\"init_running\", false);\nglobal.set(\"all_configs_done\",false);\n\nglobal.set(\"electricitymeter_first_init_done\", false);\nglobal.set(\"yaml_config_loaded\", false);\nglobal.set(\"tokenok\", false);\nglobal.set(\"expires_at\",new Date());\nglobal.set(\"configuration\", \"\");\nglobal.set(\"first\",false);\n\nglobal.set(\"push_counter\", 0);\nglobal.set(\"subscription_successful\", false);\nglobal.set(\"subscription_running\", false);\n\nglobal.set(\"mqtt_state\",\"offline\");\nglobal.set(\"rest_api_state\",\"offline\");\n\nglobal.set(\"last_ecotracker_local_api_heartbeat\", {});\n\nglobal.set('hvac_states', []);\n\nglobal.set(\"device_main_name\", \"everHome2MQTT\")\nglobal.set(\"sw_version\", \"V2.0.11\")\n\nreturn msg;",
+        "func": "global.set(\"config\", {\n    central_done: false,\n    gateways_done: false,\n    all_other_devices_done: false,\n});\n\nglobal.set(\"init_running\", false);\nglobal.set(\"all_configs_done\",false);\n\nglobal.set(\"electricitymeter_first_init_done\", false);\nglobal.set(\"yaml_config_loaded\", false);\nglobal.set(\"tokenok\", false);\nglobal.set(\"expires_at\",new Date());\nglobal.set(\"configuration\", \"\");\nglobal.set(\"first\",false);\n\nglobal.set(\"push_counter\", 0);\nglobal.set(\"subscription_successful\", false);\nglobal.set(\"subscription_running\", false);\n\nglobal.set(\"mqtt_state\",\"offline\");\nglobal.set(\"rest_api_state\",\"offline\");\n\nglobal.set(\"last_ecotracker_local_api_heartbeat\", {});\n\nglobal.set('hvac_states', []);\n\nglobal.set(\"device_main_name\", \"everHome2MQTT\")\nglobal.set(\"sw_version\", \"V2.0.12\")\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -3415,7 +3414,7 @@
         "z": "cf02ad9c7e091fb3",
         "g": "523ad0dd6fd4a780",
         "name": "Homes",
-        "func": "let homes = global.get('homes');\nconst language = msg.language;\n\n// create availability list\n//general\nlet avty_states_connected = [];\navty_states_connected.push(\n    {\n        \"t\": \"everhome/central/state_connected/websocket\",\n        \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n    }\n)\navty_states_connected.push(\n    {\n        \"t\": \"everhome/central/state_connected/mqtt\",\n        \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n    }\n)\n\nvar optionsObject = {\n    \"general\": {\n        \"key\": \"general\",\n        \"type\": \"options\",\n        \"options\": [\"1\", \"0\", \"h\"]\n    }\n};\n\n\n\nhomes.forEach(function(element,index) {\n\n    // Causes problems in connection with the MQTT node\n    if (element.action !== undefined) {\n        delete element.action;\n    }    \n    element.subtype = element.type;  \n    element.device_name = `${element.name}`;\n    element.language = language;\n    element.manufacturer = \"everHome2MQTT\";\n    element.model = \"Home\";\n    element.via_device = \"everhome_central\";\n    element.main_topic = \"everhome/home\";\n    element.config = {};\n    element.uniq_id_main = `everhome_${element.subtype}_id_${element.id}`;\n    element.config.avty = avty_states_connected;\n    element.states = {};\n    element.ts = {};\n    element.id = index + 1;\n    element.device_id = `everhome_${element.subtype}_${element.id}`;\n    element.statedefinitions = optionsObject; \n\n    if (element.presence && element.presence.state !== undefined) {\n        switch (element.presence.state) {\n            case \"1\":\n                element.states.state = \"on\";\n                element.presence = \"present\";\n                break;\n            case \"0\":\n                element.states.state = \"off\";\n                element.presence = \"away\";\n                break;\n            case \"h\":\n                element.states.state = \"off\";\n                element.presence = \"holiday\";\n                break;\n            default:\n                element.states.state = \"off\";\n                element.presence = \"away\";\n        }\n    }\n});\n\nmsg.homes = homes;\n\nreturn msg;",
+        "func": "let homes = global.get('homes');\nconst language = msg.language;\n\n// create availability list\n//general\nlet avty_states_connected = [];\navty_states_connected.push(\n    {\n        \"t\": \"everhome/central/state_connected/websocket\",\n        \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n    }\n)\navty_states_connected.push(\n    {\n        \"t\": \"everhome/central/state_connected/mqtt\",\n        \"val_tpl\": `{{'online' if value_json.value == 'online' else 'offline'}}`\n    }\n)\n\nvar optionsObject = {\n    \"general\": {\n        \"key\": \"general\",\n        \"type\": \"options\",\n        \"options\": [\"1\", \"0\", \"h\"]\n    }\n};\n\nconst configuration = msg.configuration;\nconst set_object_id = configuration.devices.set_object_id;\n\nhomes.forEach(function(element,index) {\n\n    // Causes problems in connection with the MQTT node\n    if (element.action !== undefined) {\n        delete element.action;\n    }    \n    element.subtype = element.type;  \n    element.set_object_id = set_object_id;    \n    element.device_name = `${element.name}`;\n    element.language = language;\n    element.manufacturer = \"everHome2MQTT\";\n    element.model = \"Home\";\n    element.via_device = \"everhome_central\";\n    element.main_topic = \"everhome/home\";\n    element.config = {};\n    element.uniq_id_main = `everhome_${element.subtype}_id_${element.id}`;\n    element.config.avty = avty_states_connected;\n    element.states = {};\n    element.ts = {};\n    element.id = index + 1;\n    element.device_id = `everhome_${element.subtype}_${element.id}`;\n    element.statedefinitions = optionsObject; \n\n    if (element.presence && element.presence.state !== undefined) {\n        switch (element.presence.state) {\n            case \"1\":\n                element.states.state = \"on\";\n                element.presence = \"present\";\n                break;\n            case \"0\":\n                element.states.state = \"off\";\n                element.presence = \"away\";\n                break;\n            case \"h\":\n                element.states.state = \"off\";\n                element.presence = \"holiday\";\n                break;\n            default:\n                element.states.state = \"off\";\n                element.presence = \"away\";\n        }\n    }\n});\n\nmsg.homes = homes;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -6719,8 +6718,7 @@
         "y": 1680,
         "wires": [
             [
-                "7e24c5c34fdd420a",
-                "68fbf80e5284f0a6"
+                "7e24c5c34fdd420a"
             ],
             [
                 "bae1c73d625fbabc"
@@ -6775,7 +6773,7 @@
         "z": "95278f532bb93da2",
         "g": "b2f04ce1015743c7",
         "name": "sensor - presence",
-        "func": "const uniq_id_sub = \"presence\";\n\nconst element = msg.payload;\n\nif (element[uniq_id_sub] !== undefined) { \n    const stat_t = `${element.main_topic}/${element.id}/${uniq_id_sub}`;\n    const avty = [...element.config.avty];\n    avty.push(\n        {\n            \"t\": stat_t,\n            \"val_tpl\": `{{'online' if value_json.value is defined else 'offline'}}`\n        }\n    )\n\n    let payload = {\n        \"uniq_id\": `${element.uniq_id_main}_${uniq_id_sub}`,\n        \"stat_t\": stat_t,\n        \"name\": ((text, targetLanguage) => global.get(\"translations\")[text]?.[targetLanguage] || global.get(\"translations\")[text]?.en || text)(uniq_id_sub, global.get(\"language\")),\n        \"ent_cat\": \"diagnostic\",\n        \"val_tpl\": `{{ value_json.value if value_json.value is defined else 'false'}}`,\n        \"device\": {\n            //\"name\": element.device_name,\n            \"ids\": [\n                element.device_id\n            ]\n        },\n        \"avty\": avty,\n        \"avty_mode\": \"all\"\n    };\n\n    let component = 'sensor';\n    if (element.set_object_id) {\n        payload[\"default_entity_id\"] = component + \".\" + payload.uniq_id;\n        node.warn(\"my warning\");\n    }else{\n        node.warn(\"my warning_2\");\n    }\n\n\n    let discovery_prefix = 'homeassistant';\n    let node_id = 'everhome';\n\n    let prefix = 'config';\n    let topic = `${discovery_prefix}/${component}/${node_id}/${element.uniq_id_main}_${uniq_id_sub}/${prefix}`;\n    msg.topic = topic;\n\n    msg.payload = payload;\n    node.send(msg);\n}",
+        "func": "const uniq_id_sub = \"presence\";\n\nconst element = msg.payload;\n\nif (element[uniq_id_sub] !== undefined) { \n    const stat_t = `${element.main_topic}/${element.id}/${uniq_id_sub}`;\n    const avty = [...element.config.avty];\n    avty.push(\n        {\n            \"t\": stat_t,\n            \"val_tpl\": `{{'online' if value_json.value is defined else 'offline'}}`\n        }\n    )\n\n    let payload = {\n        \"uniq_id\": `${element.uniq_id_main}_${uniq_id_sub}`,\n        \"stat_t\": stat_t,\n        \"name\": ((text, targetLanguage) => global.get(\"translations\")[text]?.[targetLanguage] || global.get(\"translations\")[text]?.en || text)(uniq_id_sub, global.get(\"language\")),\n        \"ent_cat\": \"diagnostic\",\n        \"val_tpl\": `{{ value_json.value if value_json.value is defined else 'false'}}`,\n        \"device\": {\n            //\"name\": element.device_name,\n            \"ids\": [\n                element.device_id\n            ]\n        },\n        \"avty\": avty,\n        \"avty_mode\": \"all\"\n    };\n\n    let component = 'sensor';\n    if (element.set_object_id) {\n        payload[\"default_entity_id\"] = component + \".\" + payload.uniq_id;\n    }\n\n    let discovery_prefix = 'homeassistant';\n    let node_id = 'everhome';\n\n    let prefix = 'config';\n    let topic = `${discovery_prefix}/${component}/${node_id}/${element.uniq_id_main}_${uniq_id_sub}/${prefix}`;\n    msg.topic = topic;\n\n    msg.payload = payload;\n    node.send(msg);\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -7169,24 +7167,6 @@
                 "4a300ee35db77eae"
             ]
         ]
-    },
-    {
-        "id": "68fbf80e5284f0a6",
-        "type": "debug",
-        "z": "95278f532bb93da2",
-        "g": "b2f04ce1015743c7",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 740,
-        "y": 1680,
-        "wires": []
     },
     {
         "id": "58dfceae4a681e65",
